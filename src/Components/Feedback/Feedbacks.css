@@ -1,0 +1,96 @@
+.feedback-section {
+    min-height: calc(100svh - 10rem);
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.feedback-section .section-heading {
+    font-size: var(--heading);
+    align-self: center;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.feedback-section .section-body {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-body .feedback-container {
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+}
+
+.feedback-container .swiper-wrapper {
+    width: 100%;
+}
+
+.feedback-container .swiper-button-next,
+.feedback-container .swiper-button-prev {
+    color: var(--primary);
+}
+
+.feedback-container .swiper-pagination-bullet {
+    background: var(--primary);
+}
+
+.feedback-container .left-button,
+.feedback-container .right-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--heading);
+    padding: .5rem;
+    cursor: pointer;
+    user-select: none;
+    border-radius: .3rem;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 7rem;
+    color: var(--primary);
+}
+
+.feedback-container .left-button i,
+.feedback-container .right-button i {
+    font-size: 3rem;
+    color: inherit;
+}
+
+.feedback-container .left-button:hover,
+.feedback-container .right-button:hover {
+    background: var(--bg);
+}
+
+.feedback-container .left-button {
+    left: 0rem;
+}
+
+.feedback-container .right-button {
+    right: 0rem;
+}
+
+
+.feedback-container .feedback-card-container {
+    display: flex;
+}
+
+
+@media screen and (max-width:500px) {
+
+    .feedback-container .swiper-button-next,
+    .feedback-container .swiper-button-prev {
+        display: none;
+    }
+}

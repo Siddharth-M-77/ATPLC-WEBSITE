@@ -1,0 +1,211 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Flat UI Icons */
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --primary: #9c394b;
+  --blue: #6ba2f9;
+  --secondary: #4a4e5a;
+  --info: #41c5f1;
+  --info-tint: #87edff;
+  --success: #41f1b6;
+  --success-tint: #60ffca;
+  --warning: #ffbb55;
+  --warning-tint: #ffdeac;
+  --danger: #ff7782;
+  --danger-tint: #ffb1b8;
+  --small-font: 1.2rem;
+  --medium-font: 1.6rem;
+  --large-font: 2rem;
+  --heading: 2.5rem;
+  --hover: rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* Font Family */
+  /* font-family: 'Babylonica', cursive;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Poppins', 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+::selection {
+  color: var(--bg-light);
+  background: var(--text);
+}
+
+/* Body */
+
+body {
+  --bg-light: hsl(0, 0%, 100%);
+  --bg: hsl(0, 0%, 94%);
+  --bg-dark: hsl(0, 0%, 88%);
+  --text: #101010;
+  --faded-text: rgba(0, 0, 0, 0.3);
+
+  background: var(--bg-light);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Body Dark Mode */
+
+body.dark {
+  --bg-light: hsl(0, 0%, 18%);
+  --bg: hsl(0, 0%, 13%);
+  --bg-dark: hsl(0, 0%, 8%);
+  --text: #ffffff;
+  --faded-text: rgba(255, 255, 255, 0.3);
+
+  background: var(--bg-light);
+  color: var(--text);
+}
+
+/* Predefined Resets */
+:-webkit-autofill {
+  /* filter: none; */
+  /* needed for firefox! */
+  box-shadow: 0 0 0 100px rgba(185, 200, 255, 0.2) inset;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Helper Class */
+
+.message-box {
+  padding: 1rem 0;
+  text-align: center;
+  background: linear-gradient(to right, transparent, var(--bg-dark), transparent);
+  color: var(--blue);
+  font-weight: 600;
+  font-size: var(--small-font);
+  transition: .3s;
+}
+
+.animate-rotate {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.pending {
+  background: var(--warning-tint);
+}
+
+.success {
+  background: var(--success-tint);
+}
+
+.info {
+  background: var(--info-tint);
+}
+
+.danger {
+
+  background: var(--danger-tint);
+}
+
+
+.icon,
+.icon i {
+  display: grid;
+  place-items: center;
+  font-size: var(--large-font);
+  color: inherit;
+  user-select: none;
+}
+
+.icon i {
+  margin-top: -.2rem;
+}
+
+.icon~.text {
+  color: inherit;
+  font-size: var(--medium-font);
+}
+
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
+}
+
+
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 50%;
+  }
+
+}
+
+
+
+
+
+/* Responsive */
+
+@media screen and (max-width:650px) {
+  .dashboard-page {
+    grid-template-columns: 1fr;
+  }
+
+  :root {
+    --medium-font: 1.8rem;
+  }
+}
